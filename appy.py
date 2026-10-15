@@ -106,8 +106,8 @@ if seccion == "Resumen":
     # 1. Filtramos y convertimos a texto de inmediato para evitar el OverflowError
     proximas = citas[citas["fecha"].astype(str) >= hoy].copy().astype(str)
     # 2. Estructura limpia sin sub-bloques complejos de indentación
-        if proximas.empty:
-            st.info("No hay reservas futuras registradas.")
+    if proximas.empty:
+    st.info("No hay reservas futuras registradas.")
         else:
             proximas["_orden"] = proximas["fecha"] + " " + proximas["hora"]
             proximas = proximas.sort_values("_orden").drop(columns="_orden")
