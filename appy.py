@@ -3,12 +3,12 @@
 # Aplicación Streamlit para estilista/cosmetóloga.
 
 ## Funciones
-- Agenda de reservas con fecha, hora, duración, datos de clienta, servicio, producto, precio, abono y estado.
-- Avisos de próximas citas mientras la aplicación está abierta.
-- Catálogo editable de servicios y precios.
-- Inventario con existencias, mínimos y vencimiento.
-- Caja, ingresos, gastos y saldos pendientes.
-- Exportación de tablas a CSV y Excel.
+#- Agenda de reservas con fecha, hora, duración, datos de clienta, servicio, producto, precio, abono y estado.
+#- Avisos de próximas citas mientras la aplicación está abierta.
+#- Catálogo editable de servicios y precios.
+#- Inventario con existencias, mínimos y vencimiento.
+#- Caja, ingresos, gastos y saldos pendientes.
+#- Exportación de tablas a CSV y Excel.
 
 ## Ejecutar
 1. Instala Python.
