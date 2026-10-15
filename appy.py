@@ -108,7 +108,13 @@ if seccion == "Resumen":
         if not proximas.empty:
             proximas["_orden"] = proximas["fecha"].astype(str) + " " + proximas["hora"].astype(str)
             proximas = proximas.sort_values("_orden").drop(columns="_orden")
-          st.dataframe( proximas.head(10).astype(str), use_container_width=True, hide_index=True )
+          if not proximas.empty:
+            proximas["_orden"] = proximas["fecha"].astype(str) + " " + proximas["hora"].astype(str)
+            proximas = proximas.sort_values("_orden").drop(columns="_orden")
+            st.dataframe(proximas.head(10).astype(str), use_container_width=True, hide_index=True)
+        else:
+            st.info("No hay reservas futuras registradas.")
+        as
         else:
             st.info("No hay reservas futuras registradas.")
     else:
