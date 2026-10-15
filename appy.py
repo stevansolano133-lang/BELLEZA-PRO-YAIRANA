@@ -11,9 +11,9 @@
 #- Exportación de tablas a CSV y Excel.
 
 ## Ejecutar
-1. Instala Python.
-2. Instala dependencias: `pip install -r requirements.txt`
-3. Ejecuta: `streamlit run app.py`
+#1. Instala Python.
+#2. Instala dependencias: `pip install -r requirements.txt`
+#3. Ejecuta: `streamlit run app.py`
 
 ## Publicar en Streamlit Community Cloud
 Sube `app.py` y `requirements.txt` a un repositorio GitHub y selecciona `app.py` como archivo principal.
