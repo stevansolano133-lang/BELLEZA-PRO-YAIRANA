@@ -12,7 +12,6 @@ st.set_page_config(
     page_icon="✨",
     layout="centered"
 )
-
 # Estilos visuales personalizados
 st.markdown("""
     <style>
