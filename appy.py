@@ -1,6 +1,6 @@
 # BELLEZA PRO — Agenda e inventario
 
-Aplicación Streamlit para estilista/cosmetóloga.
+# Aplicación Streamlit para estilista/cosmetóloga.
 
 ## Funciones
 - Agenda de reservas con fecha, hora, duración, datos de clienta, servicio, producto, precio, abono y estado.
