@@ -103,21 +103,16 @@ if seccion == "Resumen":
     c.metric("Productos registrados", len(inventario))
     d.metric("Alertas de stock bajo", len(stock_bajo))
     st.subheader("Próximas reservas")
-    if not citas.empty:
-        proximas = citas[citas["fecha"].astype(str) >= hoy].copy()
-        if not proximas.empty:
-            proximas["_orden"] = proximas["fecha"].astype(str) + " " + proximas["hora"].astype(str)
-            proximas = proximas.sort_values("_orden").drop(columns="_orden")
-          if not proximas.empty:
-            proximas["_orden"] = proximas["fecha"].astype(str) + " " + proximas["hora"].astype(str)
-            proximas = proximas.sort_values("_orden").drop(columns="_orden")
-            st.dataframe(proximas.head(10).astype(str), use_container_width=True, hide_index=True)
-        else:
+    # 1. Filtramos y convertimos a texto de inmediato para evitar el OverflowError
+        proximas = citas[citas["fecha"].astype(str) >= hoy].copy().astype(str)
+
+        # 2. Estructura limpia sin sub-bloques complejos de indentación
+        if proximas.empty:
             st.info("No hay reservas futuras registradas.")
-        as
         else:
-            st.info("No hay reservas futuras registradas.")
-    else:
+            proximas["_orden"] = proximas["fecha"] + " " + proximas["hora"]
+            proximas = proximas.sort_values("_orden").drop(columns="_orden")
+            st.dataframe(proximas.head(10), use_container_width=True, hide_index=True)
         st.info("Todavía no hay citas. Entra a «Agenda de reservas» para crear la primera.")
     if not stock_bajo.empty:
         st.subheader("⚠️ Productos por reponer")
