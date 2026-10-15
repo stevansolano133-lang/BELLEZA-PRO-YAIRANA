@@ -1,24 +1,31 @@
-# BELLEZA PRO — Agenda e inventario
+import streamlit as st
+import pandas as pd
 
-# Aplicación Streamlit para estilista/cosmetóloga.
+# Configuración de la página
+st.set_page_config(page_title="BELLEZA PRO", layout="wide")
 
-## Funciones
-#- Agenda de reservas con fecha, hora, duración, datos de clienta, servicio, producto, precio, abono y estado.
-#- Avisos de próximas citas mientras la aplicación está abierta.
-#- Catálogo editable de servicios y precios.
-#- Inventario con existencias, mínimos y vencimiento.
-#- Caja, ingresos, gastos y saldos pendientes.
-#- Exportación de tablas a CSV y Excel.
+st.title("BELLEZA PRO - Agenda e Inventario")
+st.subheader("Aplicación Streamlit para estilista/cosmetóloga.")
 
-## Ejecutar
-#1. Instala Python.
-#2. Instala dependencias: `pip install -r requirements.txt`
-#3. Ejecuta: `streamlit run app.py`
+# Menú lateral para navegar en las funciones que anotaste
+opcion = st.sidebar.selectbox(
+    "Selecciona una sección:",
+    ["Agenda de Reservas", "Catálogo de Servicios", "Inventario", "Caja y Gastos"]
+)
 
-## Publicar en Streamlit Community Cloud
-#Sube `app.py` y `requirements.txt` a un repositorio GitHub y selecciona `app.py` como archivo principal.
+if opcion == "Agenda de Reservas":
+    st.header("📅 Agenda de Reservas")
+    st.write("Próximas citas y control de estados.")
+    # Aquí irá el código para guardar citas
 
-## Importante sobre datos y recordatorios
-#La base SQLite se guarda localmente en `belleza_pro.db`. En entornos gratuitos en la nube, los archivos locales pueden no ser una solución de almacenamiento permanente; descarga respaldos y considera conectar una base de datos persistente antes de depender de ella para uso diario.
-#Los recordatorios de esta versión aparecen dentro de la app abierta. Las notificaciones push/SMS/WhatsApp con la app cerrada requieren una integración adicional.
+elif opcion == "Catálogo de Servicios":
+    st.header("💇 Catálogo de Servicios")
+    st.write("Gestión de servicios y precios.")
 
+elif opcion == "Inventario":
+    st.header("📦 Inventario")
+    st.write("Control de existencias, mínimos y vencimientos.")
+
+elif opcion == "Caja y Gastos":
+    st.header("💰 Caja, Ingresos y Gastos")
+    st.write("Control de saldos pendientes.")
