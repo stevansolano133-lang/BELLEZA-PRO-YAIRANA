@@ -13,9 +13,7 @@ FILES = {
     "citas": DATA_DIR / "citas.csv",
     "servicios": DATA_DIR / "servicios.csv",
     "inventario": DATA_DIR / "inventario.csv",
-    "movimientos": DATA_DIR / "movimientos.csv",
-}
-
+    "movimientos": DATA_DIR / "movimientos.csv",}
 SCHEMAS = {
     "citas": ["id", "fecha", "hora", "nombre", "apellido", "telefono", "servicio", "producto", "valor", "estado", "notas", "creado"],
     "servicios": ["servicio", "duracion_min", "precio", "activo"],
