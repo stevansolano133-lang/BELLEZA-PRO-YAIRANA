@@ -104,9 +104,8 @@ if seccion == "Resumen":
     d.metric("Alertas de stock bajo", len(stock_bajo))
     st.subheader("Próximas reservas")
     # 1. Filtramos y convertimos a texto de inmediato para evitar el OverflowError
-        proximas = citas[citas["fecha"].astype(str) >= hoy].copy().astype(str)
-
-        # 2. Estructura limpia sin sub-bloques complejos de indentación
+    proximas = citas[citas["fecha"].astype(str) >= hoy].copy().astype(str)
+    # 2. Estructura limpia sin sub-bloques complejos de indentación
         if proximas.empty:
             st.info("No hay reservas futuras registradas.")
         else:
