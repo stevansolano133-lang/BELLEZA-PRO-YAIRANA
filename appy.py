@@ -67,7 +67,6 @@ async def obtener_reserva(id_reserva: int):
     if id_reserva not in db_reservas:
         raise HTTPException(status_code=404, detail="Número de reserva no encontrado")
     return db_reservas[id_reserva]
-[1:45 a. m., 15/10/2026] Dios Es Amor 😍: import streamlit as st
 import pandas as pd
 from datetime import datetime, time
 import random
