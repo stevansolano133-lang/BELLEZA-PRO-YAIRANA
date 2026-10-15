@@ -10,8 +10,7 @@ from docx import Document
 st.set_page_config(
     page_title="Belleza Pro Yairana",
     page_icon="✨",
-    layout="centered"
-)
+    layout="centered")
 # Estilos visuales personalizados
 st.markdown("""
     <style>
