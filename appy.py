@@ -157,7 +157,6 @@ elif opcion == "📊 Catálogo y Métricas":
     servicios_data = [
         {"Servicio": "Diseño y Depilación de Cejas", "Área": "Facial", "Duración Est.": "30 min"},
         {"Servicio": "Laminad…
-[2:16 a. m., 15/10/2026] Dios Es Amor 😍: import streamlit as st
 import pandas as pd
 from datetime import date
 from openai import OpenAI
