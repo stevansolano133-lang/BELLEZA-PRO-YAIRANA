@@ -16,9 +16,9 @@
 #3. Ejecuta: `streamlit run app.py`
 
 ## Publicar en Streamlit Community Cloud
-Sube `app.py` y `requirements.txt` a un repositorio GitHub y selecciona `app.py` como archivo principal.
+#Sube `app.py` y `requirements.txt` a un repositorio GitHub y selecciona `app.py` como archivo principal.
 
 ## Importante sobre datos y recordatorios
-La base SQLite se guarda localmente en `belleza_pro.db`. En entornos gratuitos en la nube, los archivos locales pueden no ser una solución de almacenamiento permanente; descarga respaldos y considera conectar una base de datos persistente antes de depender de ella para uso diario.
-Los recordatorios de esta versión aparecen dentro de la app abierta. Las notificaciones push/SMS/WhatsApp con la app cerrada requieren una integración adicional.
+#La base SQLite se guarda localmente en `belleza_pro.db`. En entornos gratuitos en la nube, los archivos locales pueden no ser una solución de almacenamiento permanente; descarga respaldos y considera conectar una base de datos persistente antes de depender de ella para uso diario.
+#Los recordatorios de esta versión aparecen dentro de la app abierta. Las notificaciones push/SMS/WhatsApp con la app cerrada requieren una integración adicional.
 
